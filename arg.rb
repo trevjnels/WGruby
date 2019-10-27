@@ -17,9 +17,17 @@ def brandy.bark_at(something_dumb)
 end
 
 
-def toy_object.call_all_methods(obj, args, *meths)
+def toy_object.call_all_methods_on_arr_args_stupid(obj, args, *meths)
   meths.each_with_index { |method, index|  obj.send method, args[index]}
 end
 
 
-toy_object.call_all_methods(brandy, ["mouse", "rabbit", "sushi roll"],  :bark_at, :chase, :eat)
+
+toy_object.call_all_methods_on_arr_args_stupid(brandy, ["mouse", "rabbit", "sushi roll"],  :bark_at, :chase, :eat)
+
+
+def toy_object.call_all_methods_on_one_arg(obj, *meths, arg )
+  meths.each_with_index { |method, index|  obj.send method, arg}
+end
+
+toy_object.call_all_methods_on_one_arg(brandy,  :bark_at, :chase, :eat, "rabbit")
