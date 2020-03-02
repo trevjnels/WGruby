@@ -51,3 +51,5 @@
 # p.report # => "Hello from MeFirst!"
 # # prepend changes the hirarchy of lookup so it oges to MeFirst before Person to look up method
 # puts Person.ancestors
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
