@@ -1,16 +1,11 @@
 module Stacklike
   def stack
-    @stack ||= [] # will assign to empty arr only if @stack.nil?
+    @stack ||= []
   end
-  def add(item)
-    @stack.push(item)
+    def add_to_stack(obj)
+    stack.push(obj)
   end
-  def remove
-    @stack.pop
-  end
-  def show
-    puts "_-^*^-_-^*^-_-^*^-_-^*^-_"
-    puts @stack
-    puts "_-^*^-_-^*^-_-^*^-_-^*^-_"
+  def take_from_stack
+    stack.pop
   end
 end
